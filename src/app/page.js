@@ -3,7 +3,7 @@
 
 import { useState } from 'react';
 import axios from 'axios';
-import { products } from './data';
+import { products } from '../data/data';
 
 export default function Home() {
   return (

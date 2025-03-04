@@ -1,7 +1,8 @@
 
 import { Client, resources } from 'coinbase-commerce-node';
-import { products } from '../../data';
+import { products } from '../../data/data';
 
+console.log(process.env.COINBASE_API)
 //initiate the coinbase commerce client 
 Client.init(String(process.env.COINBASE_API));
 const { Charge } = resources;
@@ -9,8 +10,16 @@ const { Charge } = resources;
 const coinInitRoute = async(req, res) => {
 
   const { id } = req.body
+  console.log('Received ID:', id);  // Log recieved ID
+  if (!id) {
+    return res.status(400).send({ error: 'Product ID is required' });
+  }
 //retrieve product id from req.body and use it to search for product
   const product = products.find(product => product.id === id)
+  if (!product) {
+    return res.status(404).send({ error: 'Product not found' });
+  } else console.log(product)
+
 
   try {
 
@@ -33,7 +42,8 @@ const coinInitRoute = async(req, res) => {
     res.send(charge);
 
   } catch (e) {
-    res.status(500).send({ error:e });
+    console.error('Error during charge creation:', e);
+    res.status(500).send({ error: e.message || 'Internal Server Error' });
   }
 
 }
