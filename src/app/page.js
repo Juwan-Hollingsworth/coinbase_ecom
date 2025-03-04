@@ -44,7 +44,10 @@ const Products = ({product}) => {
       <p class="uppercase">{product.description}</p>
       
       <p class="uppercase">Price: {product.price} {product.currency}</p>
+      <div className="flex justify-center items-center">
       <button onClick={coinbase} onTouchStart={coinbase} disabled={loading}   class="bg-transparent border-2 border-black text-black hover:bg-gray-500 hover:text-white py-2 px-4  focus:outline-none disabled:opacity-50 disabled:cursor-not-allowed uppercase" > Pay With Crypto </button>
+      </div>
+     
     </div>
   )
   
