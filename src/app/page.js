@@ -7,14 +7,19 @@ import { products } from '../data/data';
 
 export default function Home() {
   return (
-    <div className={"container"}>
+    <>
+    <h1 className='text-center'>Cloth Season: 02 Sample Gallery</h1>
+    <div className={"container mx-auto max-w-6xl px-4"}>
+      
       {
         products.map( (product, index) => {
           return (<Products key={index} product={product} />)
         })
       }
     </div>
+    </>
   )
+  
 }
 
 const Products = ({product}) => {
@@ -34,10 +39,13 @@ const Products = ({product}) => {
 
   return (
     <div>
+      {product.image && <img class="h-[400px]" src={product.image} alt={product.name} />}
       <h4>{product.name}</h4>
       <p>{product.description}</p>
+      
       <p>Price: {product.price} {product.currency}</p>
-      <button onClick={coinbase} disabled={loading}> Pay With Crtpto </button>
+      <button onClick={coinbase} disabled={loading}   class="bg-transparent border-2 border-black text-black hover:bg-gray-500 hover:text-white py-2 px-4  focus:outline-none disabled:opacity-50 disabled:cursor-not-allowed" > Pay With Crypto </button>
     </div>
   )
+  
 }

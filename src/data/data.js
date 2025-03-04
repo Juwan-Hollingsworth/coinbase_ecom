@@ -1,44 +1,51 @@
+
 export const products = [
     {
         id: 1,
-        name: "Small Black Chair",
-        price: 10,
-        currency: "USD",
-        description: "Soft Chair, Best value for Money"
+        name: "Cloth New York Staple Tee",
+        price: 0.01,
+        image: "/CLT_MOCK_TSHIRT.png",
+        currency: "BTC",
+        description: "All cotton classic Cloth t-shirt with printed logo."
     },
     {
         id: 2,
-        name: "Spoon",
+        name: "Cloth New York Paradox Tee",
         price: 2,
+        image:"/CLT_MOCK_TSHIRT.png",
         currency: "USDT",
-        description: "Spoon gets the best value for Money"
+        description: "All cotton classic Cloth t-shirt with printed logo."
     },
     {
         id: 3,
-        name: "Small Table",
+        name: "Cloth New York Graphic Tee",
         price: 10,
+        image:"/CLT_MOCK_TSHIRT.png",
         currency: "USDC",
-        description: "Soft Table, Best value for Money"
+        description: "All cotton classic Cloth t-shirt with printed logo."
     },
     {
         id: 4,
-        name: "Silver",
+        name: "Cloth New York Corner Store Tee",
         price: 0.2,
+        image:"/CLT_MOCK_TSHIRT.png",
         currency: "ETH",
-        description: "Silver spoon set"
+        description: "All cotton classic Cloth t-shirt with printed logo."
     },
     {
         id: 5,
-        name: "Silver Cup",
+        name: "Cloth New York Hoodie",
         price: 0.03,
+        image:"https://cnydev.netlify.app/static/media/CLT-MOCK-HOODIE.01479675400fdd95c3b5.webp",
         currency: "BTC",
-        description: "Cup for the big men"
+        description: "All cotton classic Cloth t-shirt with printed logo."
     },
     {
         id: 6,
-        name: "Basic Cup",
+        name: "Cloth New York Run Shorts",
         price: 2000,
+        image:"https://cnydev.netlify.app/static/media/CLT-MOCK-HOODIE.01479675400fdd95c3b5.webp",
         currency: "DOGE",
-        description: "Best value for Money"
+        description: "All cotton classic Cloth t-shirt with printed logo."
     }
 ]
