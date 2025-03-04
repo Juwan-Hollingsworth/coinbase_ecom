@@ -30,7 +30,7 @@ const Products = ({product}) => {
     try {
       const data = await axios.post('/api/init', { id: product.id })
       setLoading(false)
-      window.open(data.data.hosted_url, '_blank');
+      window.location.href = data.data.hosted_url;
     } catch (e) {
       console.error(e)
       setLoading(false)
@@ -39,12 +39,12 @@ const Products = ({product}) => {
 
   return (
     <div>
-      {product.image && <img class="h-[400px]" src={product.image} alt={product.name} />}
+      {product.image && <img class=" max-h-[400px]w-auto" src={product.image} alt={product.name} />}
       <h4 class="uppercase">{product.name}</h4>
       <p class="uppercase">{product.description}</p>
       
       <p class="uppercase">Price: {product.price} {product.currency}</p>
-      <button onClick={coinbase} disabled={loading}   class="bg-transparent border-2 border-black text-black hover:bg-gray-500 hover:text-white py-2 px-4  focus:outline-none disabled:opacity-50 disabled:cursor-not-allowed uppercase" > Pay With Crypto </button>
+      <button onClick={coinbase} onTouchStart={coinbase} disabled={loading}   class="bg-transparent border-2 border-black text-black hover:bg-gray-500 hover:text-white py-2 px-4  focus:outline-none disabled:opacity-50 disabled:cursor-not-allowed uppercase" > Pay With Crypto </button>
     </div>
   )
   
