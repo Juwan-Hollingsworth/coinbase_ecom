@@ -8,7 +8,7 @@ import { products } from '../data/data';
 export default function Home() {
   return (
     <>
-    <h1 className='text-center'>Cloth Season: 02 Sample Gallery</h1>
+    <h1 className='text-center uppercase font-bold'>Cloth Season: 02 Crypto Gallery concept</h1>
     <div className={"container mx-auto max-w-6xl px-4"}>
       
       {
@@ -40,11 +40,11 @@ const Products = ({product}) => {
   return (
     <div>
       {product.image && <img class="h-[400px]" src={product.image} alt={product.name} />}
-      <h4>{product.name}</h4>
-      <p>{product.description}</p>
+      <h4 class="uppercase">{product.name}</h4>
+      <p class="uppercase">{product.description}</p>
       
-      <p>Price: {product.price} {product.currency}</p>
-      <button onClick={coinbase} disabled={loading}   class="bg-transparent border-2 border-black text-black hover:bg-gray-500 hover:text-white py-2 px-4  focus:outline-none disabled:opacity-50 disabled:cursor-not-allowed" > Pay With Crypto </button>
+      <p class="uppercase">Price: {product.price} {product.currency}</p>
+      <button onClick={coinbase} disabled={loading}   class="bg-transparent border-2 border-black text-black hover:bg-gray-500 hover:text-white py-2 px-4  focus:outline-none disabled:opacity-50 disabled:cursor-not-allowed uppercase" > Pay With Crypto </button>
     </div>
   )
   

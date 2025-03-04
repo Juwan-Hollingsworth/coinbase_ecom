@@ -41,15 +41,7 @@ body {
 .container > div {
   display: block;
   margin: 0.8em;
-  padding: 2em;
+  padding: 1em;
   border: 2px solid black;
   flex-grow: 1;
-}
-
-
-@font-face {
-  font-family: 'trade-gothic-bold';
-  src: url('/font/trade-gothic-lt-bold.ttf') format('trade-gothic-bold');
-  font-weight: normal;
-  font-style: normal;
 }
